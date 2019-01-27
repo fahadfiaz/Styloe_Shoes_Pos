@@ -1,0 +1,90 @@
+﻿<Window x:Class="Stylo_Shoes_System.AdminStockReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AdminStockReport" Height="600" Width="850" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="AlternatingListViewItemStyle" TargetType="{x:Type ListViewItem}">
+            <Style.Triggers>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                    <Setter Property="Background" Value="LightBlue"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Image Source="./Resources/ae.png" Margin="62,49,631,405" Canvas.ZIndex="1"/>
+        <Image Source="./Resources/log1.jpg" Margin="-171,0,-133,0"  />
+        <Menu HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="842" RenderTransformOrigin="0.118,-0.036">
+            <MenuItem Header="AddItem" Height="27" FontSize="16" Click="MenuItem_Click_1"></MenuItem>
+            <Line X1="0" X2="0" Y1="0" Y2="20" Stroke="Black" StrokeThickness="1" Margin="5,0,10,0"/>
+            <MenuItem Header="UpdateItem" FontSize="16" Click="MenuItem_Click_2" ></MenuItem>
+            <Line X1="0" X2="0" Y1="0" Y2="20" Stroke="Black" StrokeThickness="1" Margin="5,0,10,0"/>
+            <MenuItem Header="DeleteItem" FontSize="16" Click="MenuItem_Click_3"></MenuItem>
+            <MenuItem Header="StockReport" FontSize="16"></MenuItem>
+        </Menu>
+
+        <Label Content="EFSI STOCK REPORT" HorizontalAlignment="Left" Margin="316,104,0,0" VerticalAlignment="Top" Width="367" Height="38" FontSize="28" FontFamily="David"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="27" Margin="330,0,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label Content="FROM" HorizontalAlignment="Left" Margin="62,184,0,0" VerticalAlignment="Top" Width="96" FontSize="18" FontFamily="David" Height="23"/>
+        <DatePicker Name="pick1" HorizontalAlignment="Left" Margin="141,183,0,0" VerticalAlignment="Top" Width="186" Height="24"/>
+        <DatePicker Name="pick2" HorizontalAlignment="Left" Margin="476,183,0,0" VerticalAlignment="Top" Width="187"/>
+        <Label Content="TO" HorizontalAlignment="Left" Margin="414,179,0,0" VerticalAlignment="Top" Width="103" FontFamily="David" FontSize="18"/>
+        <Button Content="SEARCH" HorizontalAlignment="Left" Margin="721,183,0,0" VerticalAlignment="Top" Width="91" Height="27" FontFamily="David" FontSize="18" Click="Button_Click_2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <ListView Name="listview" HorizontalAlignment="Left" Height="269" Margin="62,221,0,0" VerticalAlignment="Top" Width="750" FontSize="14" ItemsSource="{Binding MyResultRows}" SelectionMode="Single" ItemContainerStyle="{StaticResource AlternatingListViewItemStyle}" AlternationCount="2">
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Id}" Header="ID" Width="90"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Price}" Header="PRICE" Width="90" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Category}" Header="CATEGORY" Width="90" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Size}" Header="SIZE" Width="90" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Color}" Header="COLOR" Width="90" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Brand}" Header="BRAND" Width="90" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Date}" Header="DATE-OF-ENTRY" Width="170" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="VIEW REPORT" HorizontalAlignment="Left" Margin="62,513,0,0" VerticalAlignment="Top" Width="130" Height="28" FontFamily="David" FontSize="18" Click="Button_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="721,513,0,0" VerticalAlignment="Top" Width="91" Height="28" FontFamily="David" FontSize="18" Click="Button_Click_3">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="52" Margin="316,99,0,0" VerticalAlignment="Top" Width="280"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="84" Margin="304,83,0,0" VerticalAlignment="Top" Width="306"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="269" Margin="62,221,0,0" VerticalAlignment="Top" Width="750"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,142 @@
+﻿<Window x:Class="Stylo_Shoes_System.NewSalesClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NewSalesClient" Height="600" Width="850" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Right" Width="844">
+      
+        <Image Source="./Resources/log1.jpg" Margin="-169,0,-135,-10" RenderTransformOrigin="0.496,0.49"  />
+        <Label Content="PRODUCT ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,117,0,0" Width="106" Height="32" FontSize="16" FontFamily="David"/>
+        <Label Content="PRICE(BDT)" HorizontalAlignment="Left" Margin="81,158,0,0" VerticalAlignment="Top" Width="106" FontSize="16" FontFamily="David" Height="26"/>
+        <Label Content="CATEGORY" HorizontalAlignment="Left" Margin="81,199,0,0" VerticalAlignment="Top" Width="102" FontFamily="David" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.123"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="SIZE" HorizontalAlignment="Left" Margin="81,249,0,0" VerticalAlignment="Top" Width="106" FontFamily="David" FontSize="16" Height="26"/>
+        <TextBox Name="id" HorizontalAlignment="Left" Height="32" Margin="226,117,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="146" FontSize="14"/>
+        <TextBox Name="price" HorizontalAlignment="Left" Height="32" Margin="226,158,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="146" FontSize="14"/>
+
+        <Label Content="COLOR" HorizontalAlignment="Left" Margin="428,69,0,0" VerticalAlignment="Top" Width="135" Height="32" FontSize="16" FontFamily="David"/>
+        <Label Content="BRAND" HorizontalAlignment="Left" Margin="423,117,0,0" VerticalAlignment="Top" Width="135" Height="32" FontSize="16" FontFamily="David"/>
+        <Label Content="DATE OF PURCHASE" HorizontalAlignment="Left" Margin="421,166,0,0" VerticalAlignment="Top" Width="169" Height="32" FontSize="16" FontFamily="David"/>
+
+        <Button Content="NEW SALES" Name="add" HorizontalAlignment="Left" Margin="595,378,0,0" VerticalAlignment="Top" Width="114" Height="30" FontSize="16" RenderTransformOrigin="0.51,0.184" Click="add_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="753,518,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.544,2.918" Height="30" FontSize="18" Click="Button_Click_2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Label Content="NEW SALES" HorizontalAlignment="Left" Margin="304,10,0,0" VerticalAlignment="Top" Width="367" Height="38" FontSize="28" FontFamily="David"/>
+
+        <Label Content="SEARCH BY PID" HorizontalAlignment="Left" Margin="81,71,0,0" VerticalAlignment="Top" Width="130" FontSize="16" FontFamily="David" Height="26"/>
+        <Button Content="SEARCH" HorizontalAlignment="Left" Margin="226,65,0,0" VerticalAlignment="Top" Width="146" Height="32" FontSize="20" FontFamily="David" Click="Button_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <TextBox x:Name="category" HorizontalAlignment="Left" Height="32" Margin="226,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="size" HorizontalAlignment="Left" Height="32" Margin="226,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.472,-0.852"/>
+        <TextBox x:Name="color" HorizontalAlignment="Left" Height="32" Margin="595,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
+        <TextBox x:Name="brand" HorizontalAlignment="Left" Height="32" Margin="595,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.556,0.611"/>
+        <Button Content="SHOW SALES" HorizontalAlignment="Left" Margin="595,322,0,0" VerticalAlignment="Top" Width="114" Height="32" FontFamily="David" FontSize="16" Click="Button_Click_4">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="PURCHASE" HorizontalAlignment="Left" Margin="595,430,0,0" VerticalAlignment="Top" Width="114" Height="32" FontFamily="David" FontSize="16" Click="Button_Click_3">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="SAVE" HorizontalAlignment="Left" Margin="595,487,0,0" VerticalAlignment="Top" Width="114" Height="32" FontFamily="David" FontSize="16" Click="Button_Click_5">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <DatePicker Name="date" HorizontalAlignment="Left" Margin="595,166,0,0" VerticalAlignment="Top" Width="166" Height="28"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="273" Margin="67,289,0,0" Stroke="Black" VerticalAlignment="Top" Width="491" ScrollViewer.IsDeferredScrollingEnabled="True"/>
+        
+        <Label x:Name="head" Content="              EFSI PURCHASING RECEIPT&#xD;&#xA;       15/12, NEW MARKET, KISHORGANJ&#xD;&#xA;CELL:+880-1711-360899 / +880-1711-360899&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="177,286,0,0" VerticalAlignment="Top" Width="260" Height="62" />
+        <Label x:Name="lid" Content="PRODUCT  ID" HorizontalAlignment="Left" Margin="98,348,0,0" VerticalAlignment="Top" Width="89" FontFamily="David"/>
+        <Label x:Name="lp" Content="PRIZE (BDT)" HorizontalAlignment="Left" Margin="98,365,0,0" VerticalAlignment="Top" Width="79"/>
+        <Label x:Name="lc" Content="COLOR" HorizontalAlignment="Left" Margin="98,386,0,0" VerticalAlignment="Top" Width="69" FontFamily="David" RenderTransformOrigin="0.522,-0.045"/>
+        <Label x:Name="ls" Content="SIZE" HorizontalAlignment="Left" Margin="98,403,0,0" VerticalAlignment="Top" Width="69" FontFamily="David" RenderTransformOrigin="0.478,0.182"/>
+        <Label x:Name="lct" Content="CATEGORY" HorizontalAlignment="Left" Margin="98,414,0,0" VerticalAlignment="Top" Width="79"/>
+        <Label x:Name="lb" Content="BRAND" HorizontalAlignment="Left" Margin="98,436,0,0" VerticalAlignment="Top" Width="69" FontFamily="David"/>
+        <Label x:Name="ld" Content="PURCHASED" HorizontalAlignment="Left" Margin="98,456,0,0" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.494,-0.154"/>
+        <Label x:Name="ll" Content="------------------------------------------------------------------------------------------" HorizontalAlignment="Left" Margin="98,468,0,0" VerticalAlignment="Top" Width="434" Height="20"/>
+
+        <Label x:Name="lls"   Content="THANKS YOU FOR PURCHASING!!!!&#xD;&#xA;FOR FUTURE REFERENCE KINDLY PROVIDE THE RECEIPT&#xD;&#xA;REPAIRMENT WARRANTY PERIOD: 6 MONTHS(EFSI PRODUCT)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="98,487,0,0" VerticalAlignment="Top" Width="399" Height="45" FontFamily="David">
+        </Label>
+        <TextBlock Name="tid" HorizontalAlignment="Left" Margin="207,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181" Height="22"/>
+        <TextBlock Name="tp" HorizontalAlignment="Left" Margin="207,365,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
+        <TextBlock Name="tc" HorizontalAlignment="Left" Margin="207,386,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="139"/>
+        <TextBlock Name="ts"  HorizontalAlignment="Left" Margin="207,404,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"/>
+        <TextBlock Name="tct"  HorizontalAlignment="Left" Margin="207,420,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="87"/>
+        <TextBlock Name="tb"  HorizontalAlignment="Left" Margin="207,441,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.251" Width="77"/>
+        <TextBlock Name="td"  HorizontalAlignment="Left" Margin="207,461,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="139"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="273" Margin="67,289,0,0" VerticalAlignment="Top" Width="491"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="38" Margin="304,10,0,0" VerticalAlignment="Top" Width="176"/>
+    </Grid>
+</Window>
+

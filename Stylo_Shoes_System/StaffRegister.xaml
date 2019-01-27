@@ -1,0 +1,49 @@
+﻿<Window x:Class="Stylo_Shoes_System.StaffRegister"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StaffRegister" Height="600" Width="850" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image Source="./Resources/staff.png" Margin="62,49,584,358" Canvas.ZIndex="1"/>
+        <Image Source="./Resources/log1.jpg" Margin="-171,-23,-133,0"  />
+        <Label Content="REGISTRATION FORM" HorizontalAlignment="Left" Margin="282,110,0,0" VerticalAlignment="Top" Width="376" Height="60" FontSize="32" FontFamily="David"/>
+        <Label Content="USERNAME" HorizontalAlignment="Left" Margin="155,236,0,0" VerticalAlignment="Top" Width="105" FontSize="16" RenderTransformOrigin="0.5,-0.047" FontFamily="David"/>
+        <Label Content="PASSWORD" HorizontalAlignment="Left" Margin="155,291,0,0" VerticalAlignment="Top" Width="105" FontSize="16" FontFamily="David"/>
+        <Label Content="CONFIRM PASSWORD" HorizontalAlignment="Left" Margin="155,342,0,0" VerticalAlignment="Top" Width="207" FontFamily="david" FontSize="16"/>
+        <Label Content="ROLE" HorizontalAlignment="Left" Margin="155,399,0,0" VerticalAlignment="Top" Width="174" FontFamily="David" FontSize="16"/>
+        <TextBox Name="usr" HorizontalAlignment="Left" Height="32" Margin="348,236,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="177" FontSize="14"/>
+        <TextBox Name="pass" HorizontalAlignment="Left" Height="32" Margin="348,285,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="177" FontSize="14"/>
+        <TextBox Name="cpass" HorizontalAlignment="Left" Height="32" Margin="348,342,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="177" FontSize="14"/>
+        <TextBox Name="role" HorizontalAlignment="Left" Height="32" Margin="348,399,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="177" FontSize="14"/>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="546,401,0,0" VerticalAlignment="Top" Width="70" Height="30" FontSize="16" Click="Button_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="REGISTER" HorizontalAlignment="Left" Margin="635,401,0,0" VerticalAlignment="Top" Width="104" Height="30" FontSize="16" Click="Button_Click_2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="43" Margin="282,110,0,0" VerticalAlignment="Top" Width="347"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="75" Margin="265,95,0,0" VerticalAlignment="Top" Width="379"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="263" Margin="142,219,0,0" VerticalAlignment="Top" Width="614"/>
+
+    </Grid>
+</Window>

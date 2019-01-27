@@ -1,0 +1,170 @@
+﻿<Window x:Class="Stylo_Shoes_System.NewCustomerService"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NewCustomerService" Height="600" Width="850" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Right" Width="844">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="573*"/>
+            <ColumnDefinition Width="271*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="./Resources/log1.jpg" Margin="-170,0,-134,-10" RenderTransformOrigin="0.496,0.49" Grid.ColumnSpan="2"  />
+        <Label Content="PRODUCT ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,90,0,0" Width="106" Height="32" FontSize="16" FontFamily="David"/>
+        <Label Content="PRICE(BDT)" HorizontalAlignment="Left" Margin="81,127,0,0" VerticalAlignment="Top" Width="106" FontSize="16" FontFamily="David" Height="26"/>
+        <Label Content="CATEGORY" HorizontalAlignment="Left" Margin="81,172,0,0" VerticalAlignment="Top" Width="102" FontFamily="David" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="26">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.123"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="SIZE" HorizontalAlignment="Left" Margin="81,209,0,0" VerticalAlignment="Top" Width="106" FontFamily="David" FontSize="16" Height="26"/>
+        <TextBox Name="id" HorizontalAlignment="Left" Height="32" Margin="226,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="146" FontSize="14"/>
+        <TextBox Name="price" HorizontalAlignment="Left" Height="32" Margin="226,127,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="146" FontSize="14"/>
+
+        <Label Content="COLOR" HorizontalAlignment="Left" Margin="81,243,0,0" VerticalAlignment="Top" Width="135" Height="32" FontSize="16" FontFamily="David"/>
+        <Label Content="BRAND" HorizontalAlignment="Left" Margin="81,286,0,0" VerticalAlignment="Top" Width="135" Height="32" FontSize="16" FontFamily="David"/>
+        <Label Content="PURCHASE DATE" HorizontalAlignment="Left" Margin="421,171,0,0" VerticalAlignment="Top" Width="169" Height="32" FontSize="16" FontFamily="David" Grid.ColumnSpan="2"/>
+
+        <Button Content="NEW SERVICE" Name="add" HorizontalAlignment="Left" Margin="22,421,0,0" VerticalAlignment="Top" Width="135" Height="30" FontSize="16" RenderTransformOrigin="0.51,0.184" Click="add_Click" Grid.Column="1" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="191,523,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.544,2.918" Height="30" FontSize="18" Click="Button_Click_1" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Label Content="NEW CUSTOMER SERVICE" HorizontalAlignment="Left" Margin="303,10,0,0" VerticalAlignment="Top" Width="367" Height="38" FontSize="22" FontFamily="David" Grid.ColumnSpan="2"/>
+
+        <Label Content="SEARCH BY PID" HorizontalAlignment="Left" Margin="81,59,0,0" VerticalAlignment="Top" Width="130" FontSize="16" FontFamily="David" Height="26"/>
+        <Button Content="SEARCH" HorizontalAlignment="Left" Margin="226,53,0,0" VerticalAlignment="Top" Width="146" Height="32" FontSize="20" FontFamily="David" Click="Button_Click_2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <TextBox x:Name="category" HorizontalAlignment="Left" Height="32" Margin="226,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="size" HorizontalAlignment="Left" Height="32" Margin="226,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.472,-0.852"/>
+        <TextBox x:Name="color" HorizontalAlignment="Left" Height="32" Margin="226,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="brand" HorizontalAlignment="Left" Height="32" Margin="226,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.556,0.611"/>
+        <Button Content="SHOW SERVICE" HorizontalAlignment="Left" Margin="22,370,0,0" VerticalAlignment="Top" Width="135" Height="32" FontFamily="David" FontSize="16" Click="Button_Click_4" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="ADD SERVICE" HorizontalAlignment="Left" Margin="22,470,0,0" VerticalAlignment="Top" Width="135" Height="32" FontFamily="David" FontSize="16" Click="Button_Click_3" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="SAVE" HorizontalAlignment="Left" Margin="22,521,0,0" VerticalAlignment="Top" Width="135" Height="32" FontFamily="David" FontSize="16" Grid.Column="1" Click="Button_Click_5">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <DatePicker  Name="date" HorizontalAlignment="Left" Margin="22,166,0,0" VerticalAlignment="Top" Width="146" Height="32" Grid.Column="1"/>
+        <Label Content="CUSTOMER NAME" HorizontalAlignment="Left" Margin="421,59,0,0" VerticalAlignment="Top" Width="169" FontFamily="David" FontSize="16" Grid.ColumnSpan="2"/>
+        <TextBox Name="cust" HorizontalAlignment="Left" Height="32" Margin="22,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Grid.Column="1"/>
+        <Label Content="ADDRESS" HorizontalAlignment="Left" Margin="421,96,0,0" VerticalAlignment="Top" Width="139" FontFamily="David" FontSize="16"/>
+        <TextBox Name="addr" HorizontalAlignment="Left" Height="32" Margin="22,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Grid.Column="1"/>
+        <Label Content="PHONE" HorizontalAlignment="Left" Margin="421,133,0,0" VerticalAlignment="Top" Width="139" FontFamily="David" FontSize="16"/>
+        <TextBox Name="phn" HorizontalAlignment="Left" Height="32" Margin="22,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Grid.Column="1"/>
+        <Label Content="SERVICE DATE" HorizontalAlignment="Left" Margin="421,208,0,0" VerticalAlignment="Top" Width="139" FontFamily="David" FontSize="16"/>
+        <DatePicker Name="date2" HorizontalAlignment="Left" Margin="22,203,0,0" VerticalAlignment="Top" Width="146" Height="32" Grid.Column="1"/>
+        <Label Content="RETURN DATE" HorizontalAlignment="Left" Margin="421,243,0,0" VerticalAlignment="Top" Width="139" Height="32" FontFamily="David" FontSize="16"/>
+        <DatePicker Name="date3" HorizontalAlignment="Left" Margin="22,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.456,-0.375" Width="146" Height="32" Grid.Column="1"/>
+        <Label Content="SERVICE CHARGE" HorizontalAlignment="Left" Margin="421,286,0,0" VerticalAlignment="Top" Width="153" FontFamily="David" FontSize="16" Grid.ColumnSpan="2"/>
+        <TextBox Name="chg" HorizontalAlignment="Left" Height="32" Margin="22,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Grid.Column="1"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="239" Margin="54,323,0,0" Stroke="Black" VerticalAlignment="Top" Width="480" ScrollViewer.IsDeferredScrollingEnabled="True"/>
+
+        <Label x:Name="head" Content="              EFSI SERVICE RECEIPT&#xA;       15/12, NEW MARKET, KISHORGANJ&#xA;CELL:+880-1711-360899 / +880-1711-360899&#xA;&#xA;" HorizontalAlignment="Left" Margin="186,323,0,0" VerticalAlignment="Top" Width="260" Height="42" />
+        <Label x:Name="lid" Content="PRODUCT  ID" HorizontalAlignment="Left" Margin="98,370,0,0" VerticalAlignment="Top" Width="89" FontFamily="David"/>
+        <Label x:Name="lp" Content="PRIZE (BDT)" HorizontalAlignment="Left" Margin="98,386,0,0" VerticalAlignment="Top" Width="79"/>
+        <Label x:Name="lc" Content="COLOR" HorizontalAlignment="Left" Margin="98,414,0,0" VerticalAlignment="Top" Width="69" FontFamily="David" RenderTransformOrigin="0.522,-0.045"/>
+        <Label x:Name="ls" Content="SIZE" HorizontalAlignment="Left" Margin="98,432,0,0" VerticalAlignment="Top" Width="69" FontFamily="David" RenderTransformOrigin="0.478,0.182"/>
+        <Label x:Name="lct" Content="CATEGORY" HorizontalAlignment="Left" Margin="98,450,0,0" VerticalAlignment="Top" Width="79"/>
+        <Label x:Name="lb" Content="BRAND" HorizontalAlignment="Left" Margin="98,476,0,0" VerticalAlignment="Top" Width="69" FontFamily="David"/>
+        <Label x:Name="ld" Content="PURCHASED" HorizontalAlignment="Left" Margin="98,497,0,0" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.494,-0.154"/>
+        <TextBlock Name="tid" HorizontalAlignment="Left" Margin="216,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181" Height="22" Text="this"/>
+        <TextBlock Name="tp" HorizontalAlignment="Left" Margin="216,386,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="165"/>
+        <TextBlock Name="tc" HorizontalAlignment="Left" Margin="216,409,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="139"/>
+        <TextBlock Name="ts"  HorizontalAlignment="Left" Margin="216,429,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="87"/>
+        <TextBlock Name="tct"  HorizontalAlignment="Left" Margin="216,450,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="87"/>
+        <TextBlock Name="tb"  HorizontalAlignment="Left" Margin="216,476,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.495,-0.251" Width="77"/>
+        <TextBlock x:Name="td"  HorizontalAlignment="Left" Margin="216,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"><Run Text="TextBlock"/><InlineUIContainer>
+        		
+        	</InlineUIContainer></TextBlock>
+        <Label x:Name="CU" Content="CUSTOMER NAME" HorizontalAlignment="Left" Margin="98,521,0,0" VerticalAlignment="Top" Width="113"/>
+        <Label x:Name="P" Content="PHONE" HorizontalAlignment="Left" Margin="98,537,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+        <Label x:Name="AS" Content="ADDRESS" HorizontalAlignment="Left" Margin="359,440,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBlock x:Name="PO" HorizontalAlignment="Left" Margin="216,542,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="87"/>
+        <TextBlock x:Name="AER" HorizontalAlignment="Left" Margin="421,445,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="113" Height="63"/>
+        <TextBlock x:Name="NA" HorizontalAlignment="Left" Margin="216,523,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="SR" Content="SERVICE" HorizontalAlignment="Left" Margin="359,360,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="RT" Content="RETURN" HorizontalAlignment="Left" Margin="359,382,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.455,0.231"/>
+        <Label x:Name="CC" Content="CHARGE" HorizontalAlignment="Left" Margin="360,414,0,0" VerticalAlignment="Top" Width="59"/>
+        <TextBlock x:Name="LS" HorizontalAlignment="Left" Margin="421,365,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.38,-0.25" Width="113" Height="22"/>
+        <TextBlock x:Name="LR" HorizontalAlignment="Left" Margin="424,387,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="113" Height="35"/>
+        <TextBlock x:Name="LC" HorizontalAlignment="Left" Margin="424,422,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="113" Height="23"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="28" Margin="303,10,0,0" VerticalAlignment="Top" Width="287" Grid.ColumnSpan="2"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="239" Margin="54,323,0,0" VerticalAlignment="Top" Width="480"/>
+
+
+    </Grid>
+</Window>
+

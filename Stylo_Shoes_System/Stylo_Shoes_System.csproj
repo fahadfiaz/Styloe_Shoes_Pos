@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F23E1BEB-C467-42A5-8058-C5BF86120E6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Stylo_Shoes_System</RootNamespace>
+    <AssemblyName>Stylo_Shoes_System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="sapbusinessobjects.wpf.viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AdminCustomerService.xaml.cs">
+      <DependentUpon>AdminCustomerService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminNewCustomerService.xaml.cs">
+      <DependentUpon>AdminNewCustomerService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStockReport.xaml.cs">
+      <DependentUpon>AdminStockReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateCustomerService.xaml.cs">
+      <DependentUpon>AdminUpdateCustomerService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewCustomerService.xaml.cs">
+      <DependentUpon>AdminViewCustomerService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientInvoice.xaml.cs">
+      <DependentUpon>ClientInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSalesReport.xaml.cs">
+      <DependentUpon>ClientSalesReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientServiceReport.xaml.cs">
+      <DependentUpon>ClientServiceReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientStockReport.xaml.cs">
+      <DependentUpon>ClientStockReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerService.xaml.cs">
+      <DependentUpon>CustomerService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteProduct.xaml.cs">
+      <DependentUpon>DeleteProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomerService.xaml.cs">
+      <DependentUpon>NewCustomerService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewSalesClient.xaml.cs">
+      <DependentUpon>NewSalesClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu.xaml.cs">
+      <DependentUpon>ReportMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SaleRep.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleRep.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport.xaml.cs">
+      <DependentUpon>SalesReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceInvoice.xaml.cs">
+      <DependentUpon>ServiceInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRep.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceRep.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StaffRegister.xaml.cs">
+      <DependentUpon>StaffRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomerService.xaml.cs">
+      <DependentUpon>UpdateCustomerService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateItem.xaml.cs">
+      <DependentUpon>UpdateItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePassword.xaml.cs">
+      <DependentUpon>UpdatePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel.xaml.cs">
+      <DependentUpon>UserPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCustomerService.xaml.cs">
+      <DependentUpon>ViewCustomerService.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Additem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminCustomerService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminNewCustomerService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminStockReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminUpdateCustomerService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminViewCustomerService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientInvoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientSalesReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientServiceReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientStockReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Additem.xaml.cs">
+      <DependentUpon>Additem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewCustomerService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewSalesClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SalesReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ServiceInvoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StaffRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateCustomerService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdatePassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewCustomerService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleRep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SaleRep.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceRep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ServiceRep.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdminBLL\AdminBLL.csproj">
+      <Project>{0eba8a3d-5bb5-46f7-b847-909954dddad7}</Project>
+      <Name>AdminBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdminBO\AdminBO.csproj">
+      <Project>{518a7208-4eb9-47ce-93c4-5bf2ba7bbe29}</Project>
+      <Name>AdminBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoginVerify\LoginVerify.csproj">
+      <Project>{6a163419-c0a4-48bf-b918-1f931e677d22}</Project>
+      <Name>LoginVerify</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ae.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\password1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\log1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Update.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\salescus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cusservice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\newrep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\salrep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\serrep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\stkrep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\news.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\views.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

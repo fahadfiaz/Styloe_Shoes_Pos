@@ -1,0 +1,63 @@
+﻿<Window x:Class="Stylo_Shoes_System.AdminPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AdminPanel" Height="600" Width="850" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Name="admin">
+        
+        <Label x:Name="Info" Content="WELCOME TO ADMIN PANEL" HorizontalAlignment="Left" Margin="229,26,0,0" VerticalAlignment="Top" Width="436" Height="56" FontFamily="David" FontSize="24"/>
+        
+        <Button x:Name="ManageStock" Background="#EDEDED" Margin="150,127,533,283" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ManageStock_Click">
+            <StackPanel>
+                <Image Source="./Resources/ae.png" Height="140" Width="150"/>
+            </StackPanel>
+        </Button>
+        <Label x:Name="MS" Content="MANAGE STOCK" HorizontalAlignment="Left" Margin="135,287,0,0" VerticalAlignment="Top" Width="202" Height="47" FontFamily="David" FontSize="22"/>
+        
+        <Button x:Name="ViewReport" Background="#EDEDED" HorizontalAlignment="Left" Margin="380,127,0,288" Width="150"  BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ViewReport_Click">
+            <StackPanel>
+                <Image Source="./Resources/report.png" Height="140" Width="150"/>
+            </StackPanel>
+        </Button>
+        <Label x:Name="Report" Content="VIEW REPORT" HorizontalAlignment="Left" Margin="380,282,0,0" VerticalAlignment="Top" Width="160" Height="52" FontSize="22" FontFamily="David"/>
+
+        <Button x:Name="Service" Background="#EDEDED" HorizontalAlignment="Left" Margin="576,132,0,283" Width="150"  BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Service_Click">
+            <StackPanel>
+                <Image Source="./Resources/service.png" Height="140" Width="150"/>
+            </StackPanel>
+        </Button>
+        <Label x:Name="Services" Content="SERVICES" HorizontalAlignment="Left" Margin="576,282,0,0" VerticalAlignment="Top" Width="150" Height="52" FontSize="22" FontFamily="David"/>
+
+        <Button x:Name="UpdatePass" Background="#EDEDED" Margin="265,356,405,62" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="UpdatePass_Click">
+            <StackPanel>
+                <Image Source="./Resources/password1.png" Height="140" Width="150"/>
+            </StackPanel>
+        </Button>
+        <Label x:Name="Password" Content="UPDATE PASSWORD" HorizontalAlignment="Left" Margin="229,513,0,0" VerticalAlignment="Top" Width="223" Height="37" FontFamily="David" FontSize="22"/>
+
+        <Button x:Name="StafRegister" Background="#EDEDED" Margin="525,356,140,62" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="StafRegister_Click">
+            <StackPanel>
+                <Image Source="./Resources/pass.png" Height="140" Width="150"/>
+            </StackPanel>
+        </Button>
+        <Label x:Name="Registration" Content="STAFF REGISTRATION" HorizontalAlignment="Left" Margin="503,513,0,0" VerticalAlignment="Top" Width="242" Height="37" FontFamily="David" FontSize="22"/>
+        <Button x:Name="LogOut" Content="LOGOUT" HorizontalAlignment="Left" Margin="650,22,0,0" VerticalAlignment="Top" Width="141" RenderTransformOrigin="0.452,-0.399" Height="37" Click="LogOut_Click" FontFamily="David" FontSize="20">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="48" Margin="229,22,0,0" VerticalAlignment="Top" Width="358"/>
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Height="72" Margin="215,10,0,0" VerticalAlignment="Top" Width="386"/>
+
+
+
+    </Grid>
+</Window>

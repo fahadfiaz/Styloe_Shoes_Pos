@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Class="Stylo_Shoes_System.ServiceInvoice"
+        Title="ServiceInvoice" Height="600" Width="850" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image Source="./Resources/log1.jpg" Margin="-171,-23,-133,0"  />
+        <Button Content="CLOSE" HorizontalAlignment="Left" Margin="715,33,0,0" VerticalAlignment="Top" Width="85" Height="39" Click="Button_Click_1" FontFamily="David" FontSize="18">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FF513B3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+
+        <Viewer:CrystalReportsViewer Name="myv" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="824" Height="485"/>
+
+
+    </Grid>
+</Window>
