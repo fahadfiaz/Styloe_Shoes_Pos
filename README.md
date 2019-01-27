@@ -27,7 +27,7 @@
 <li>You are finished</li>
 </ol>
 <h1 id="project-documentation">Project Documentation</h1>
-<p>For <strong>detailed features</strong>, <strong>Dataflow Diagrams</strong> and <em><strong>Screenshots</strong></em> of running system, please navigate to Stylo_Shoes_System_Pos/Documentation folder and open Pos_Complete_Documentation.pdf file</p>
+<p>For <strong>detailed features</strong>, <strong>Dataflow Diagrams</strong> and <em><strong>Screenshots</strong></em> of running system, please navigate to <strong>Stylo_Shoes_System_Pos/Documentation</strong> folder and open Pos_Complete_Documentation.pdf file</p>
 <h2 id="contributing">Contributing</h2>
 <ol>
 <li>Fork it.</li>
