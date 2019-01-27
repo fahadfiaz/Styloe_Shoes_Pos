@@ -11,7 +11,7 @@
 <body class="stackedit">
   
 <h2 id="style-shoes-pos">Style Shoes Pos</h2>
-<p>Stylo is a shoe retail company very popularfor selling different types ofshoe all over the Pakistan.Italso provides shoe repairing services to its consumers on demand. Recently they are facing some difficulties for keeping the records of their sales, stocks as well as customer services.They need to write down all the records in a record book manually. Hence they have decided to change the present recording system and develop a <strong>POS SYSTEM</strong> which will help them to overcome their short falls.</p>
+<p>Stylo is a shoe retail company very popularfor selling different types of shoe all over the Pakistan.It also provides shoe repairing services to its consumers on demand. Recently they are facing some difficulties for keeping the records of their sales, stocks as well as customer services.They need to write down all the records in a record book manually. Hence they have decided to change the present recording system and develop a <strong>POS SYSTEM</strong> which will help them to overcome their short falls.</p>
 <h2 id="quick-start">Quick Start</h2>
 <p>To start using Stylo_Shoes_Pos:</p>
 <h2 id="get-code">Get code</h2>
